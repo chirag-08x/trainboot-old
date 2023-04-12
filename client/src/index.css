@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+}
+
+:root {
+  --primary-transition: all 0.3s linear;
+}
+
+image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  color: white;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-center {
+  width: 90vw;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  text-transform: capitalize;
+  background: #102844;
+  padding: 0.7rem 1.6rem;
+  border-radius: 1.5rem;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
