@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AiOutlineAlignLeft } from "react-icons/ai";
 import { heroSidebarLinks, videoCards } from "../../utils/helper";
@@ -7,7 +6,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 const Player = () => {
   const { logout } = useAuth0();
   const { id } = useParams();
-  console.log(id);
   const [video, setVideo] = videoCards.filter(({ id: vid }) => vid === id);
   console.log(video);
 
@@ -107,9 +105,7 @@ const Player = () => {
                 dangerouslySetInnerHTML={{
                   __html: video.summary,
                 }}
-              >
-                {/* <p className="leading-7	">{video.summary}</p> */}
-              </div>
+              ></div>
             </div>
           </div>
         </section>

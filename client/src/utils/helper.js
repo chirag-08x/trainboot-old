@@ -151,7 +151,7 @@ export const videoCards = [
     In addition to the Course itself, comes with several helpful resources, including an online forum where readers can ask questions and interact with other learners. The book also includes links to video tutorials that supplement the content covered in the text. Overall, "Python Crash Course" is an excellent resource for anyone looking to learn Python quickly and efficiently. Whether you are a beginner or an experienced programmer looking to add Python to your skillset, this book is a must-read.`,
   },
   {
-    id: 2,
+    id: "2",
     name: "MySQL Crash Course",
     instructor: "Mosh Hamedani",
     duration: "03:10:19",
@@ -160,7 +160,7 @@ export const videoCards = [
     src: "https://iframe.mediadelivery.net/embed/114226/b0372b4a-253b-4a7e-acda-cb8460939fee?autoplay=false",
   },
   {
-    id: 3,
+    id: "3",
     name: "Javascript crash course",
     instructor: "Brad Traversy",
     duration: "01:40:30",
@@ -169,7 +169,7 @@ export const videoCards = [
     src: "https://iframe.mediadelivery.net/embed/114226/cf39cb68-2263-4bc9-ab7b-6c5b6880d59b?autoplay=false",
   },
   {
-    id: 4,
+    id: "4",
     name: "React Router v6",
     instructor: "John Smilga",
     duration: "01:40:30",
@@ -178,7 +178,7 @@ export const videoCards = [
     src: "https://iframe.mediadelivery.net/embed/114226/f086752e-7d8d-4ac1-a1fb-88c867a2159f?autoplay=false",
   },
   {
-    id: 5,
+    id: "5",
     name: "ReactJs Crash Course",
     instructor: "Brad Traversy",
     duration: "01:17:14",
