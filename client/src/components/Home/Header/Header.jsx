@@ -1,6 +1,8 @@
 import { BsArrowRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="min-h-[calc(100vh-5.4rem)] flex md:flex-row-reverse md:items-center flex-col  md:justify-between">
       <div className="w-80 md:w-fit">
@@ -16,7 +18,10 @@ const Header = () => {
           space,as eligible study material will continue to be added as they
           become available.
         </p>
-        <button className="btn flex gap-x-2 w-44 justify-center items-center md:mt-6">
+        <button
+          className="btn flex gap-x-2 w-44 justify-center items-center md:mt-6"
+          onClick={() => navigate("/verify-access-code")}
+        >
           Get Started <BsArrowRight />
         </button>
       </div>

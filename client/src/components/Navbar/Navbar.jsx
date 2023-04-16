@@ -1,8 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { navLinks } from "../../utils/helper";
-import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
-  const { loginWithRedirect } = useAuth0();
+  const navigate = useNavigate();
+
   return (
     <nav className="sticky top-0 right-0 left-0 bg-primary py-5 navbar hidden md:block">
       <section className="section-center flex justify-between items-center ">
@@ -39,8 +40,11 @@ const Navbar = () => {
               );
             })}
             <li>
-              <button className="btn" onClick={() => loginWithRedirect()}>
-                signup
+              <button
+                className="btn"
+                onClick={() => navigate("/verify-access-code")}
+              >
+                login
               </button>
             </li>
           </ul>

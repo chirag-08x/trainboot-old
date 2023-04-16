@@ -1,12 +1,14 @@
 import { navLinks } from "../../utils/helper";
 import { FaTimes } from "react-icons/fa";
 import { useGlobalAppContext } from "../../context/AppContext";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const {
     toggleSidebar,
     state: { sidebarOpen },
   } = useGlobalAppContext();
+  const navigate = useNavigate();
 
   if (sidebarOpen === true) {
     return (
@@ -52,7 +54,12 @@ const Sidebar = () => {
                 );
               })}
               <li className="mt-4">
-                <button className="btn">signup</button>
+                <button
+                  className="btn"
+                  onClick={() => navigate("/verify-access-code")}
+                >
+                  login
+                </button>
               </li>
             </ul>
           </div>

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Dashboard, Player } from "./pages";
+import { Home, Dashboard, Player, AccessCode } from "./pages";
 import { SharedLayout } from "./components";
 import { useAuth0 } from "@auth0/auth0-react";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
@@ -41,6 +41,8 @@ const App = () => {
             </PrivateRoute>
           }
         />
+
+        <Route path="/verify-access-code" element={<AccessCode />} />
       </Routes>
     </Router>
   );

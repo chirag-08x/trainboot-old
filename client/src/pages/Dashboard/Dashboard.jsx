@@ -1,8 +1,13 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { heroSidebarLinks, videoCards } from "../../utils/helper";
+import {
+  heroSidebarLinks,
+  videoCards,
+  AnnouncementCards,
+} from "../../utils/helper";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineAlignLeft } from "react-icons/ai";
 import { useState } from "react";
+import { CgNotes } from "react-icons/cg";
 
 const Dashboard = () => {
   const { logout } = useAuth0();
@@ -66,9 +71,140 @@ const Dashboard = () => {
           </nav>
 
           <div className="py-4 px-8">
-            <div>{/* Dashboard cards */}</div>
+            <div className="grid grid-cols-3 gap-x-5 mb-20">
+              <div className="bg-white rounded-xl px-5 py-8">
+                <div className="flex items-center gap-x-4">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      width="48"
+                      height="48"
+                      rx="24"
+                      fill="url(#paint0_linear_106_1300)"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15 17C15 15.8954 15.8954 15 17 15H31C32.1046 15 33 15.8954 33 17V31C33 32.1046 32.1046 33 31 33H17C15.8954 33 15 32.1046 15 31V17ZM17 17H19V18C19 19.6568 20.3432 21 22 21H26C27.6569 21 29 19.6568 29 18V17H31V31H17V17ZM21 18V17H27V18C27 18.5523 26.5523 19 26 19H22C21.4477 19 21 18.5523 21 18ZM20 23C19.4477 23 19 23.4477 19 24C19 24.5523 19.4477 25 20 25H27.9595C28.5118 25 28.9595 24.5523 28.9595 24C28.9595 23.4477 28.5118 23 27.9595 23H20ZM20.0405 27.0665C19.4882 27.0665 19.0405 27.5142 19.0405 28.0665C19.0405 28.6188 19.4882 29.0665 20.0405 29.0665H28C28.5523 29.0665 29 28.6188 29 28.0665C29 27.5142 28.5523 27.0665 28 27.0665H20.0405Z"
+                      fill="white"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_106_1300"
+                        x1="48"
+                        y1="0"
+                        x2="0"
+                        y2="48"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#BB65FF" />
+                        <stop offset="1" stop-color="#4C6FFF" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div>
+                    <h1 className="text-3xl">0</h1>
+                    <p className="text-sm text-grey-secondary">
+                      Trainings Completed
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl px-4 py-8">
+                <div className="flex items-center gap-x-4">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      width="48"
+                      height="48"
+                      rx="24"
+                      fill="url(#paint0_linear_106_1325)"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M31 21C31 23.3787 29.8135 25.4804 28 26.7453V34H25.4142L24 32.5858L22.5858 34H20V26.7453C18.1865 25.4804 17 23.3787 17 21C17 17.134 20.134 14 24 14C27.866 14 31 17.134 31 21ZM29 21C29 23.7614 26.7614 26 24 26C21.2386 26 19 23.7614 19 21C19 18.2386 21.2386 16 24 16C26.7614 16 29 18.2386 29 21ZM22 31.7573L24 29.7573L26 31.7574V27.7101C25.3663 27.8987 24.695 28 24 28C23.305 28 22.6337 27.8987 22 27.7101V31.7573Z"
+                      fill="white"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_106_1325"
+                        x1="48"
+                        y1="0"
+                        x2="0"
+                        y2="48"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#FFA674" />
+                        <stop offset="1" stop-color="#FF3737" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
 
-            <div className="grid grid-cols-[3fr_1fr]">
+                  <div>
+                    <h1 className="text-3xl">0</h1>
+                    <p className="text-sm text-grey-secondary">
+                      Tasks Completed
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl px-4 py-8">
+                <div className="flex items-center gap-x-4">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      width="48"
+                      height="48"
+                      rx="24"
+                      fill="url(#paint0_linear_106_1342)"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.4142 28.4322L12 27.018L19.0711 19.9469L25.435 26.3109L29.6777 22.0682L27.9353 20.3259L34.6274 18.5327L32.8343 25.2248L31.0919 23.4825L25.435 29.1393L19.0711 22.7754L13.4142 28.4322Z"
+                      fill="white"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_106_1342"
+                        x1="48"
+                        y1="0"
+                        x2="0"
+                        y2="48"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#FF974D" />
+                        <stop offset="1" stop-color="#FFE925" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div>
+                    <h1 className="text-3xl">0</h1>
+                    <p className="text-sm text-grey-secondary">
+                      Trainings in Progress
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-[3fr_1fr] gap-x-10">
               <div>
                 <h1 className="text-xl mb-5 text-[#1E1E1E]">Trainings</h1>
 
@@ -95,7 +231,7 @@ const Dashboard = () => {
                             </p>
                             <Link
                               to={`/dashboard/${id}`}
-                              className="bg-[#102844] text-white rounded-2xl py-2 text-md text-center"
+                              className="bg-[#102844] text-white rounded-2xl mt-1 py-2 text-md text-center"
                             >
                               Start Training
                             </Link>
@@ -106,7 +242,33 @@ const Dashboard = () => {
                   )}
                 </div>
               </div>
-              <div></div>
+
+              <div>
+                <h1 className="text-xl mb-5 text-[#1E1E1E]">Announcements</h1>
+                <div className="flex flex-col gap-y-8 bg-white rounded-xl p-4">
+                  {AnnouncementCards.map(({ id, name, duration }, index) => {
+                    return (
+                      <div key={id} className=" flex items-center gap-x-4">
+                        <div
+                          className={`${
+                            index % 2 === 0
+                              ? "bg-blue-secondary"
+                              : "bg-[#FFE4E4]"
+                          } py-4 px-5 rounded-lg`}
+                        >
+                          <CgNotes className="text-xl" />
+                        </div>
+                        <div>
+                          <p>{name}</p>
+                          <p className="text-xs text-grey-secondary">
+                            {duration}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </section>

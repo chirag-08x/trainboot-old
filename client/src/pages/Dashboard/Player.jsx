@@ -1,13 +1,15 @@
 import { Link, useParams } from "react-router-dom";
 import { AiOutlineAlignLeft } from "react-icons/ai";
+import { BiArrowBack } from "react-icons/bi";
 import { heroSidebarLinks, videoCards } from "../../utils/helper";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
 
 const Player = () => {
   const { logout } = useAuth0();
   const { id } = useParams();
   const [video, setVideo] = videoCards.filter(({ id: vid }) => vid === id);
-  console.log(video);
+  const navigate = useNavigate();
 
   return (
     <main className="min-h-screen">
@@ -52,8 +54,8 @@ const Player = () => {
 
         <section className="bg-grey-primary">
           <nav className="bg-white flex justify-between py-6 px-8">
-            <button className="text-2xl">
-              <AiOutlineAlignLeft />
+            <button className="text-2xl" onClick={() => navigate(-1)}>
+              <BiArrowBack />
             </button>
 
             <button

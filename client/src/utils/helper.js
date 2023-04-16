@@ -33,7 +33,7 @@ export const heroSidebarLinks = [
     id: uid(),
     name: "home",
     icon: <IoHomeOutline />,
-    href: "#",
+    href: "/",
   },
   {
     id: uid(),
@@ -158,6 +158,9 @@ export const videoCards = [
     thumbnail:
       "https://vz-4e750104-d0a.b-cdn.net/b0372b4a-253b-4a7e-acda-cb8460939fee/thumbnail_30f7a2ee.jpg",
     src: "https://iframe.mediadelivery.net/embed/114226/b0372b4a-253b-4a7e-acda-cb8460939fee?autoplay=false",
+    summary: `The MySQL Crash Course is a short and intensive course designed to introduce students to the fundamentals of MySQL, the most widely used open-source relational database management system. The course is ideal for those who have little or no experience with MySQL and want to quickly learn how to create and manage databases, tables, and data using SQL commands. Throughout the course, students will gain a solid understanding of the core concepts of MySQL and learn how to use it effectively to store, manage, and retrieve data.</br></br>
+
+    During the course, students will cover topics such as database design, creating and managing tables, inserting and retrieving data, querying data, and managing users and permissions. The course will also cover more advanced topics such as joins, subqueries, and transactions. By the end of the course, students will have the knowledge and skills required to create and manage their own databases using MySQL and will be able to use their newfound skills to develop applications that require a database backend.`,
   },
   {
     id: "3",
@@ -167,6 +170,9 @@ export const videoCards = [
     thumbnail:
       "https://vz-4e750104-d0a.b-cdn.net/cf39cb68-2263-4bc9-ab7b-6c5b6880d59b/thumbnail_fa5e36f5.jpg",
     src: "https://iframe.mediadelivery.net/embed/114226/cf39cb68-2263-4bc9-ab7b-6c5b6880d59b?autoplay=false",
+    summary: `The Javascript Crash Course is an intensive course designed to introduce students to the core concepts of Javascript, one of the most popular programming languages in use today. The course is ideal for beginners who want to quickly learn how to write and execute Javascript code, as well as for experienced programmers who want to brush up on their skills. Throughout the course, students will gain a solid understanding of the Javascript language and will learn how to use it to create dynamic web applications.</br></br>
+
+    During the course, students will cover topics such as variables, data types, control structures, functions, objects, arrays, and loops. They will also learn how to use Javascript to manipulate the Document Object Model (DOM) and to create interactive web pages with event handling. By the end of the course, students will be able to write basic Javascript code and will have the skills required to develop more complex applications using this powerful language. The Javascript Crash Course is an excellent starting point for anyone interested in web development, as it provides a solid foundation in one of the most essential programming languages used in this field.`,
   },
   {
     id: "4",
@@ -176,6 +182,9 @@ export const videoCards = [
     thumbnail:
       "https://vz-4e750104-d0a.b-cdn.net/f086752e-7d8d-4ac1-a1fb-88c867a2159f/thumbnail_81af2757.jpg",
     src: "https://iframe.mediadelivery.net/embed/114226/f086752e-7d8d-4ac1-a1fb-88c867a2159f?autoplay=false",
+    summary: `The React Router v6 course is designed to provide students with a deep understanding of the latest version of React Router, a popular library for routing in React applications. The course is intended for experienced React developers who want to learn how to use the latest version of the library to build dynamic and responsive single-page applications. Students will learn how to use React Router v6 to handle client-side routing and navigation, as well as how to integrate it with other React libraries and frameworks.</br></br>
+
+    During the course, students will cover a range of topics, including the core concepts of React Router v6, handling routes and nested routes, handling dynamic routes with parameters, using advanced features such as guards and redirects, and integrating with other React libraries such as Redux and React Query. By the end of the course, students will have the knowledge and skills required to build robust and scalable single-page applications using React Router v6. They will also have a deep understanding of the latest features of the library and will be able to apply this knowledge to develop cutting-edge web applications.`,
   },
   {
     id: "5",
@@ -185,5 +194,31 @@ export const videoCards = [
     thumbnail:
       "https://vz-4e750104-d0a.b-cdn.net/1a22ab74-ccf2-4428-88b4-14a32ea3cad7/thumbnail_ae700e87.jpg",
     src: "https://iframe.mediadelivery.net/embed/114226/1a22ab74-ccf2-4428-88b4-14a32ea3cad7?autoplay=false",
+    summary: `The ReactJS Crash Course is designed to provide students with a comprehensive introduction to the ReactJS library, one of the most popular JavaScript libraries used for building user interfaces. The course is ideal for beginners who have a basic understanding of HTML, CSS, and JavaScript and want to quickly learn how to build web applications using ReactJS. Throughout the course, students will gain a solid understanding of the core concepts of ReactJS and will learn how to use it to create dynamic and interactive user interfaces.</br></br>
+
+    During the course, students will cover topics such as JSX, components, props, state, events, and lifecycle methods. They will also learn how to use ReactJS to create reusable UI elements, handle user input, manage state, and work with external data sources. By the end of the course, students will have the knowledge and skills required to build their own web applications using ReactJS and will be able to use this powerful library to develop modern and responsive user interfaces. The ReactJS Crash Course is an excellent starting point for anyone interested in web development, as it provides a solid foundation in one of the most essential libraries used in this field.`,
+  },
+];
+
+export const AnnouncementCards = [
+  {
+    id: uid(),
+    name: "Team Stand-up",
+    duration: "08:00 am - 10:00 am",
+  },
+  {
+    id: uid(),
+    name: "Discussion",
+    duration: "11:30 am - 12:00 pm",
+  },
+  {
+    id: uid(),
+    name: "Task 1",
+    duration: "03:00 pm - 03:45 pm",
+  },
+  {
+    id: uid(),
+    name: "Weekly report",
+    duration: "04:30 pm - 05:00 pm",
   },
 ];

@@ -2,3 +2,4 @@ Add transition in sidebar opening.
 Add Box shadow to navbar
 Fix sidebar max-width 
 Make dashboard Shared Layout
+Refactor navigate to Link on Navbar, Sidebar and Header of Home Page.
