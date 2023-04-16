@@ -1,15 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  color: white;
 }
 
 :root {
@@ -58,4 +55,11 @@ input,
 textarea {
   display: block;
   width: 100%;
+}
+
+.summary {
+  font-family: "Poppins", sans-serif;
+  line-height: 28px;
+  font-weight: 400;
+  color: #102844;
 }

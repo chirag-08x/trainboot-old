@@ -1,3 +1,4 @@
 Add transition in sidebar opening.
 Add Box shadow to navbar
 Fix sidebar max-width 
+Make dashboard Shared Layout

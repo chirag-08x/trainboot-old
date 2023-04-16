@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         primary: "#121217",
         "blue-primary": "#102844",
+        "grey-primary": "#F1F0F0",
+        "grey-secondary": "#767278",
+        "orange-primary": "#FF7800",
       },
       fontFamily: {},
     },

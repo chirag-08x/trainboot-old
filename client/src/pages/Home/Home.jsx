@@ -1,10 +1,21 @@
 import { BiMenu } from "react-icons/bi";
 import { useGlobalAppContext } from "../../context/AppContext";
 import { Header, FeatureCard, TrainingCards, Contact } from "../../components";
+import { useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useEffect } from "react";
 
 const Home = () => {
   const { toggleSidebar } = useGlobalAppContext();
-  console.log(toggleSidebar);
+  const navigate = useNavigate();
+  const { user } = useAuth0();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/dashboard");
+    }
+  }, [user]);
+
   return (
     <main className="bg-primary">
       <section className="section-center">

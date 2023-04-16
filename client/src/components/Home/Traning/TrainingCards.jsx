@@ -2,7 +2,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 const TrainingCards = () => {
   return (
-    <section className="py-10">
+    <section className="py-10 text-white">
       <div className="text-center">
         <h1 className="text-white text-4xl mb-8 font-semibold">
           Choose the traning you want to provide

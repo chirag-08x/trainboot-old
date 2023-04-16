@@ -1,22 +1,21 @@
-import { navLinks } from "../../../utils/helper";
-import { FaTimes } from "react-icons/fa";
-import { useGlobalAppContext } from "../../../context/AppContext";
+import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { AiOutlineAlignLeft } from "react-icons/ai";
+import { heroSidebarLinks, videoCards } from "../../utils/helper";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const Sidebar = () => {
-  const {
-    toggleSidebar,
-    state: { sidebarOpen },
-  } = useGlobalAppContext();
+const Player = () => {
+  const { logout } = useAuth0();
+  const { id } = useParams();
+  console.log(id);
+  const [video, setVideo] = videoCards.filter(({ id: vid }) => vid === id);
+  console.log(video);
 
-  if (sidebarOpen === true) {
-    return (
-      <aside
-        className={`w-full max-w-sm	 md:hidden h-screen fixed bg-black py-8 px-8 ${
-          !sidebarOpen && "-translate-x-full"
-        }`}
-      >
-        <section>
-          <div className="logo flex justify-between">
+  return (
+    <main className="min-h-screen">
+      <section className="grid grid-cols-[250px_1fr]">
+        <aside className="bg-black h-screen py-10 px-4 grid gap-y-14 content-start sticky top-0 left-0">
+          <div>
             <svg
               width="163"
               height="30"
@@ -37,29 +36,86 @@ const Sidebar = () => {
                 fill="white"
               />
             </svg>
-            <button className="text-white" onClick={toggleSidebar}>
-              <FaTimes className="text-xl" />
-            </button>
           </div>
 
-          <div className="sidebar-links  mt-12">
-            <ul className="flex flex-col gap-y-6">
-              {navLinks.map(({ id, name, href }) => {
+          <div>
+            <ul className="grid gap-y-8">
+              {heroSidebarLinks.map(({ id, name, icon, href }) => {
                 return (
-                  <li key={id}>
-                    <a href={href}>{name}</a>
+                  <li key={id} className="flex items-center gap-x-4 text-lg">
+                    {icon}
+                    <Link to={href}>{name}</Link>
                   </li>
                 );
               })}
-              <li className="mt-4">
-                <button className="btn">signup</button>
-              </li>
             </ul>
           </div>
+        </aside>
+
+        <section className="bg-grey-primary">
+          <nav className="bg-white flex justify-between py-6 px-8">
+            <button className="text-2xl">
+              <AiOutlineAlignLeft />
+            </button>
+
+            <button
+              className="btn text-white"
+              onClick={() =>
+                logout({ logoutParams: { returnTo: window.location.origin } })
+              }
+            >
+              logout
+            </button>
+          </nav>
+
+          <div className="py-12 px-24">
+            <div className="relative pt-[56.25%]">
+              <iframe
+                title={video.name}
+                src={video.src}
+                loading="lazy"
+                className="border-none absolute top-0 h-[30rem] rounded-lg w-full"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; "
+                allowfullscreen="true"
+              ></iframe>
+            </div>
+
+            <div>
+              <div className="mb-5">
+                <h1 className="text-3xl font-semibold mb-3">{video.name}</h1>
+                <p className="text-grey-secondary text-lg">
+                  Video Id : #{video.id}
+                </p>
+                <p className="text-grey-secondary text-lg">
+                  By :{" "}
+                  <span className="text-black font-semibold">
+                    {video.instructor}
+                  </span>
+                </p>
+              </div>
+
+              <div className="flex gap-x-4 items-center mb-6 text-lg">
+                <button className="bg-orange-primary px-6 text-white text-lg py-3 rounded-3xl">
+                  Information
+                </button>
+                <p className="font-semibold">Training</p>
+                <p>🔐 Organization</p>
+              </div>
+
+              <div
+                className="summary"
+                dangerouslySetInnerHTML={{
+                  __html: video.summary,
+                }}
+              >
+                {/* <p className="leading-7	">{video.summary}</p> */}
+              </div>
+            </div>
+          </div>
         </section>
-      </aside>
-    );
-  }
+      </section>
+    </main>
+  );
 };
 
-export default Sidebar;
+export default Player;

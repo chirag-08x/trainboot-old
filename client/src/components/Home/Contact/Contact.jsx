@@ -7,8 +7,8 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
-    console.log(e);
+  const handleChange = () => {
+    console.log("heollo");
   };
 
   return (
@@ -31,7 +31,7 @@ const Contact = () => {
             placeholder="Email"
             name="email"
             value={values.email}
-            onChange={(e) => handleChange(e)}
+            onChange={handleChange}
           />
         </div>
         <div>
@@ -41,6 +41,7 @@ const Contact = () => {
             name="subject"
             placeholder="Subject"
             value={values.subject}
+            onChange={handleChange}
           />
         </div>
         <div>
@@ -51,6 +52,7 @@ const Contact = () => {
             rows="5"
             placeholder="Message"
             value={values.message}
+            onChange={handleChange}
           ></textarea>
         </div>
         <div>
