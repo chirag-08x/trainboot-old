@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const AccessCode = () => {
   const refContainer = useRef(null);
-  const [input, setInput] = useState(Array(6).fill());
+  const [input] = useState(Array(6).fill());
   const [index, setIndex] = useState(0);
   const [code, setCode] = useState([]);
   const [error, setError] = useState(false);
