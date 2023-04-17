@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Contact = () => {
-  const [values, setValues] = useState({
+  const [values] = useState({
     email: "",
     subject: "",
     message: "",
@@ -56,7 +56,9 @@ const Contact = () => {
           ></textarea>
         </div>
         <div>
-          <button className="bg-black w-full py-4 rounded-md">Send</button>
+          <button className="bg-black text-white w-full py-4 rounded-md">
+            Send
+          </button>
         </div>
       </form>
     </div>
